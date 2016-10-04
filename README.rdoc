@@ -16,3 +16,17 @@ chefname: string
 email: string
 
 - chefname must be present
+
+chefs:
+what we already have
+- chef model and validations
+- chefs table with name and email
+what we need to do
+-add passwords to chefs table so chefs can be authenticated and logged index
+-use email to log index
+-ability to register new chefs to use the application
+-ability to display chef profile
+-ability to lost chefs using application
+-ability for chefs to log in and log out of the application
+-restrict actionl like create recipe, edit recipe and like feature to logged in chefs only
+-restricting edit of recipes by chefs who created the recipes
