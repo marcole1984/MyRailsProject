@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20161005033234) do
   end
 
   create_table "likes", force: :cascade do |t|
-    t.boolean  "likes"
+    t.boolean  "like"
     t.integer  "chef_id"
     t.integer  "recipe_id"
     t.datetime "created_at"

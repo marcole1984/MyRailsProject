@@ -10,9 +10,8 @@ class ChefsController < ApplicationController
   end
   
   def create
-    @chef = Chef.new(chef_parmas)
+    @chef = Chef.new(chef_params)
     if @chef.save 
-      #do something
       flash[:success] = "your account was created succcessfully"
       session[:chef_id] = @chef.id
       redirect_to recipes_path
@@ -42,7 +41,7 @@ class ChefsController < ApplicationController
   
   private 
     def chef_params
-      params.require(:chef).permit(:name,:email,:password)
+      params.require(:chef).permit(:chefname,:email,:password)
     end
     
     def require_same_user
