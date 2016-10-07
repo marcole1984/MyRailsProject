@@ -30,3 +30,4 @@ what we need to do
 -ability for chefs to log in and log out of the application
 -restrict actionl like create recipe, edit recipe and like feature to logged in chefs only
 -restricting edit of recipes by chefs who created the recipes
+user.toggle!(:admin) toggle the boolean value
