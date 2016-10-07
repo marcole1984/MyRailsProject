@@ -22,9 +22,14 @@
         </div>
         <div class ="col-lg-6 well">
           <h4><%=link_to recipe.name, recipe_path(recipe)%></h4>
-          <p><%=link_to recipe.summary%></p>
+          <p><%=recipe.summary%></p>
+          
+          <% if recipe.styles.any? %>
           <p>Style:<%= render recipe.styles %></p>
+          <%end%>
+          <% if recipe.ingredients.any? %>
           <p>Ingredient:<%=render recipe.ingredients%></p>
+          <%end%>
           <p>
             <span class ='quiet'><small>Created:<%= time_ago_in_words(recipe.created_at)%> ago,</small></span>
             <span class ='quiet'><small>updated: <%= time_ago_in_words(recipe.updated_at)%> ago</small></span>
